@@ -1,0 +1,167 @@
+.rounded-corners (@radius: 10px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.center (@m: auto) {
+	margin-left: @m;
+	margin-right: @m;
+}
+
+@borderOSB: 1px solid black;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 1570px;
+	padding: 30px 100px;
+	background-color: BurlyWood;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	height: 300px;
+	width: 100%;
+}
+
+img {
+    display: block;
+    .center;
+}
+
+#logo {
+	padding: 20px;
+	float: center;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		color: ForestGreen;
+	}
+}
+
+.menu {
+	width: 100%;
+	padding: 30px;
+	a {
+		color: white;
+	}
+}
+
+.menuitem {
+	display: inline-block;
+	padding: 15px 30px;
+	margin-right: 10px;
+	font-size: 30px;
+	background: FireBrick;	
+	.rounded-corners(15px);
+	
+	&:hover {
+		background: DarkCyan;
+    }
+}
+
+input[type = text] {
+	background: white;
+	border: @borderOSB;
+	height: 40px;
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+input[type = submit] {
+	background: DarkKhaki;
+	border: @borderOSB;
+	height: 50px;
+	width: 50px;
+	color: white;
+	font-weight: bold;
+	.rounded-corners;
+	
+	&:hover {
+		background: Black;
+	}
+}
+
+.content {
+	background-color: FireBrick;
+	display: block;
+	padding: 30px;
+	position: relative;
+	top: 150px;
+	height: 500px;
+	width: 100%;
+	.rounded-corners;
+}
+
+.hostelking {
+	color: white;
+	padding-right: 20px;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	position: static;
+	text-align: justify;
+}
+
+footer {
+	font-size: 18px;
+	position: relative;
+	padding: 30px;
+	top: 150px;
+	width: 100%;
+	display: inline;
+	margin-top: 20px;
+}
+
+.buttons {
+	position: relative;
+	top: 105px;
+	float: right;
+	border: @borderOSB;
+	background-color: black;
+	.rounded-corners;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	margin: 10px 13px;
+	color: white;
+  
+  	&:hover {
+    	font-weight: bold;
+		text-decoration: underline;
+		font-style: italic;
+  	}
+  
+  	&#original {
+    	background-color: BurlyWood;
+		font-family: Arial;
+  	}
+  
+  	&#vintage {
+		background-color: GoldenRod;
+		font-family: Goudy Old Style;
+	}
+  
+  	&#cool {
+		background-color: Navy;
+		font-family: Georgia;
+	}
+  	
+}
+
+.images img {
+	display: block;
+	margin-bottom: 10px;
+	border: @borderOSB;
+	.rounded-corners(3px);
+}
+
