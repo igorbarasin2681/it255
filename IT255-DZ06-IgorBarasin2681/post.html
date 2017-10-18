@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+	
+			$("#clkbtn").click(function(){	
+				$.ajax({
+					url: "http://jsonplaceholder.typicode.com/posts/", 
+					type: "POST",
+					data: {
+						userId: parseInt($("#inputUserId").val()), 
+						title: $("#inputTitle").val(), 
+						body: $("#inputBody").val()
+					},
+					success(html) {
+						var obj = html;
+						$("#userId").empty();
+						$("#theId").empty();
+						$("#title").empty();
+						$("#body").empty();
+						$("#userId").append(obj.userId);
+						$("#theId").append(obj.id);
+						$("#title").append(obj.title);
+						$("#body").append(obj.body);
+					}      
+    
+				});
+			});	
+		});
+	</script>
+	
+	<title> POST </title>
+</head>
+<body>
+	Enter UserID: <input type="text" id="inputUserId"/> <br/> <br/>
+	Title: <input type="text" id="inputTitle"/> <br/> <br/>
+	Body: <input type="text" id="inputBody"/> <br/> <br/>
+	
+	<button id="clkbtn">POST</button> <br/><br/>
+	
+	ID: <div id="theId"> </div> <br/>
+	UserID:	<div id="userId"> </div> <br/>
+	Title: <div id="title"> </div> <br/> 
+	Body: <div id="body"> </div> <br/>
+</body>
+</html>

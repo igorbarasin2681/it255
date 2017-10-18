@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+		
+			$('#theid').keypress(function(e){
+				if(e.keyCode == 13)
+					$('#clkbtn').click();
+			});
+	
+			$("#clkbtn").click(function(){
+				$.ajax({
+					url: "http://jsonplaceholder.typicode.com/posts/" + $("#theid").val(),
+					type: "GET",
+					success: function(html){
+						var obj = html;
+						$("#userId").empty();
+						$("#theId").empty();
+						$("#title").empty();
+						$("#body").empty();
+						$("#userId").append(obj.userId);
+						$("#theId").append(obj.id);
+						$("#title").append(obj.title);
+						$("#body").append(obj.body);
+					}
+				});
+			});	
+		});
+	</script>
+	
+	<title> GET </title>
+</head>
+<body>
+	Enter ID (from 1 to 100): <input type="text" id="theid"/> <button id="clkbtn">GET</button> <br/><br/>
+	ID: <div id="theId"> </div> <br/> 
+	UserID:	<div id="userId"> </div> <br/>
+	Title: <div id="title"> </div> <br/>
+	Body: <div id="body"> </div> <br/>
+</body>
+</html>
