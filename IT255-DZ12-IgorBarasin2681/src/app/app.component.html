@@ -1,0 +1,26 @@
+<br/>
+<div class="container">
+  <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item ">
+              <a class="nav-link" routerLink='/'>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" routerLink='/contact'>Contact</a>
+            </li>
+			<li *ngIf="isAuth == 'yes'" class="nav-item">
+              <a class="nav-link text-danger" routerLink='/rooms'>Rooms</a>
+            </li>
+			<li *ngIf="isAuth == 'no'" class="nav-item">
+              <a class="nav-link text-success" routerLink='/login'>Login</a>
+            </li>
+			<li *ngIf="isAuth == 'yes'" class="nav-item" >
+			  <a (click)="onLogout()" class="nav-link text-success" routerLink="/">Logout</a>
+			</li>
+			
+          </ul>
+        </nav>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,1 @@
+INSERT INTO `rooms` (`id`, `roomname`, `tv`, `beds`) VALUES ('1', 'Presidental', '1', '3'), ('2', 'Economic', '1', '2'), ('3', 'Basic', '0', '1')
