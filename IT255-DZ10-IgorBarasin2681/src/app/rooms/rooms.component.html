@@ -1,0 +1,38 @@
+ <div class="container"> 
+	<div class="col-lg-12">
+		
+		<h4 class="text-danger p-1">Rooms</h4>
+		<hr>
+		<div class="text-center">
+		<h3>
+		<div *ngFor="let room of data" class="p-1 text-white">
+			<div class="text-light">
+			Room name:  {{room.roomname}}
+			<br/>
+			</div>
+			<div class="text-success">
+			Beds:   {{room.beds}} 
+			<br/>
+			</div>
+
+			
+			<div class="text-dark">
+			<span *ngIf="room.tv != '0'">
+				TV:   Yes
+			</span>
+			<span *ngIf="room.tv == '0'">
+				TV:   No
+			</span>
+			<br/><br/>
+			</div>
+			
+		</div>
+		</h3>
+		</div>
+		<hr>
+	</div>
+	
+	<footer class="footer float-right">
+		<p>&copy; MetHotels 2017</p>
+	  </footer>
+</div>
