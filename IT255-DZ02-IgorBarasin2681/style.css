@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 1570px;
+	padding: 30px 100px;
+	background-color: BurlyWood;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	height: 300px;
+	width: 100%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+	padding: 20px;
+	float: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: ForestGreen;
+}
+
+.menu {
+	width: 100%;
+	padding: 30px;
+}
+
+.menu a {
+	color: white;
+}
+
+.menuitem {
+	display: inline-block;
+	padding: 15px 30px;
+	margin-right: 10px;
+	font-size: 30px;
+	background: FireBrick;	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.menuitem:hover {
+	background: DarkCyan;
+}
+
+input[type = text] {
+	background: white;
+	border: 1px solid black;
+	height: 40px;
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+input[type = submit] {
+	background: DarkKhaki;
+	border: 1px solid black;
+	height: 50px;
+	width: 50px;
+	color: white;
+	font-weight: bold;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+input[type = submit]:hover {
+	background: Black;
+}
+
+.content {
+	background-color: FireBrick;
+	display: block;
+	padding: 30px;
+	position: relative;
+	top: 150px;
+	height: 500px;
+	width: 100%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.hostelking {
+	color: white;
+	padding-right: 20px;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	position: static;
+	text-align: justify;
+}
+
+footer {
+	font-size: 18px;
+	position: relative;
+	padding: 30px;
+	top: 150px;
+	width: 100%;
+	display: inline;
+	margin-top: 20px;
+}
+
+.images img {
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+
+
